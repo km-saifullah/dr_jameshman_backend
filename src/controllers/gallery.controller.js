@@ -179,7 +179,7 @@ export const updateGallery = async (req, res) => {
       fs.unlinkSync(beforePath);
 
       gallery.before = {
-        imageName: before[0].originalname,
+        imageName: beforeUpload.secure_url,
         cloudinaryId: beforeUpload.public_id,
       };
     }
@@ -195,7 +195,7 @@ export const updateGallery = async (req, res) => {
       fs.unlinkSync(afterPath);
 
       gallery.after = {
-        imageName: after[0].originalname,
+        imageName: afterUpload.secure_url,
         cloudinaryId: afterUpload.public_id,
       };
     }
